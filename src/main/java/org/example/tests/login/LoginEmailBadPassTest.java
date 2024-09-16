@@ -29,7 +29,7 @@ public class LoginEmailBadPassTest extends BaseTest {
         LoginPage page = new LoginPage(driver);
         String actual = page
                 .fillEmailField(email)
-                .fillPasswordField(LoginPage.user.password())
+                .fillPasswordField(LoginPage.USER.password())
                 .clickOnLogin()
                 .getEmailFormatErrorMessage();
         Assert.assertEquals(actual, "Неверный формат E-Mail");
