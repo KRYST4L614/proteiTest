@@ -15,32 +15,32 @@ public class FormAddDataBadPassTest extends BaseTest {
     @DataProvider(name = "itemsProvider")
     public DataTableItem[] usersProvider() {
         return new DataTableItem[]{
-                new DataTableItem("", "test", FormPage.Gender.MAN,
-                        FormPage.CheckBoxVariant.VARIANT_1_1, FormPage.RadioButtonVariant.VARIANT_2_1),
-
-                new DataTableItem("   ", "test", FormPage.Gender.WOMAN,
-                        FormPage.CheckBoxVariant.VARIANT_1_1, FormPage.RadioButtonVariant.VARIANT_2_1),
-
-                new DataTableItem("123@mag@gmail.com", "test", FormPage.Gender.MAN,
-                        FormPage.CheckBoxVariant.VARIANT_1_2, FormPage.RadioButtonVariant.VARIANT_2_1),
-
-                new DataTableItem("a@b.c", "test", FormPage.Gender.MAN,
-                        FormPage.CheckBoxVariant.VARIANT_1_1_AND_1_2, FormPage.RadioButtonVariant.VARIANT_2_1),
-
-                new DataTableItem("abc+def@gmail.com", "test", FormPage.Gender.MAN,
-                        FormPage.CheckBoxVariant.VARIANT_1_1, FormPage.RadioButtonVariant.VARIANT_2_2),
-
-                new DataTableItem("info@gmail", "test", FormPage.Gender.MAN,
-                        FormPage.CheckBoxVariant.VARIANT_1_1, FormPage.RadioButtonVariant.VARIANT_2_3),
-
-                new DataTableItem("@gmail.com", "test", FormPage.Gender.MAN,
-                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_3),
-
                 new DataTableItem("protei@protei.ru", "", FormPage.Gender.MAN,
                         FormPage.CheckBoxVariant.VARIANT_1_1, FormPage.RadioButtonVariant.VARIANT_2_3),
 
                 new DataTableItem("protei@protei.ru", "   ", FormPage.Gender.MAN,
                         FormPage.CheckBoxVariant.VARIANT_1_1, FormPage.RadioButtonVariant.VARIANT_2_3),
+
+                new DataTableItem("", "test", FormPage.Gender.MAN,
+                        FormPage.CheckBoxVariant.VARIANT_1_1_AND_1_2, FormPage.RadioButtonVariant.VARIANT_NOT_CHOOSE),
+
+                new DataTableItem("   ", "test", FormPage.Gender.WOMAN,
+                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_2),
+
+                new DataTableItem("123@mag@gmail.com", "test", FormPage.Gender.MAN,
+                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_3),
+
+                new DataTableItem("a@b.c", "test", FormPage.Gender.MAN,
+                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_1),
+
+                new DataTableItem("abc+def@gmail.com", "test", FormPage.Gender.WOMAN,
+                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_1),
+
+                new DataTableItem("info@gmail", "test", FormPage.Gender.WOMAN,
+                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_3),
+
+                new DataTableItem("@gmail.com", "test", FormPage.Gender.MAN,
+                        FormPage.CheckBoxVariant.VARIANT_NOT_CHOOSE, FormPage.RadioButtonVariant.VARIANT_2_2),
         };
     }
 
